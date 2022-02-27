@@ -74,7 +74,7 @@ async def start_command(client: Client, message: Message):
                 ids = [int(int(argument[1]) / abs(client.db_channel.id))]
             except BaseException:
                 return
-        temp_msg = await message.reply("<code>Tunggu Sebentar...</code>")
+        temp_msg = await message.reply("<code>sabar tunggu bokepnya keluar...</code>")
         try:
             messages = await get_messages(client, ids)
         except BaseException:
@@ -240,16 +240,16 @@ Akun Terhapus: <code>{deleted}</code></b>"""
         await msg.delete()
 
 
-@Bot.on_message(filters.command("ping"))
+@Bot.on_message(filters.command("sexping"))
 async def ping_pong(client, m: Message):
     start = time()
     current_time = datetime.utcnow()
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
-    m_reply = await m.reply_text("Pinging...")
+    m_reply = await m.reply_text("Coli dulu...")
     delta_ping = time() - start
     await m_reply.edit_text(
-        "<b>PONG!!</b>🏓 \n"
+        "<b>Ngentott!!</b>💦 \n"
         f"<b>• Pinger -</b> <code>{delta_ping * 1000:.3f}ms</code>\n"
         f"<b>• Uptime -</b> <code>{uptime}</code>\n"
     )
